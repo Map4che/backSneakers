@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const config = require("./config.js");
+const path = require("path");
 require("dotenv").config();
 
 const uri = process.env.MONGODB_URI;
@@ -17,6 +18,10 @@ mongoose
   })
   .catch((err) => console.log(err.message));
 
+app.use(express.static(path.join(__dirname, "public")));
+app.get("/", (req, res) =>
+  res.sendFile(path.join(__dirname, "public", "home.html"))
+);
 app.use("/", sneakers);
 app.use("/", users);
 

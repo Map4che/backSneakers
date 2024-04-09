@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneakers Api</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <h1>Sneakers Api: End points</h1>
+      <div class="container">
+        <div class="container-items container-products">
+          <h2>Get products</h2>
+          <p>
+            Click on the next button to get the product list, remember that
+            products without stock are not going to be displayed
+          </p>
+          <button><a href="/products">Get products</a></button>
+        </div>
+        <div class="container-items container-rules">
+          <h2>Get brand on sales</h2>
+          <label>Get Brand with disscount for user</label>
+          <h4>Instructions</h4>
+          <p>
+            Copy the next URL and replace {id_user} with the correct id, and
+            {brandName} with the name of brand that you look for, next just
+            paste after the URL on top
+          </p>
+          <h5>
+            /price/<strong>{id_user}</strong>/<strong>{brandName}</strong>
+          </h5>
+        </div>
+        <div class="container-items container-users">
+          <h2>Get users</h2>
+          <label
+            >If you don't know the id user, you could click on the next button
+          </label>
+          <button><a href="/users">Get users</a></button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
